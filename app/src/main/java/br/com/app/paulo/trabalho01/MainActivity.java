@@ -1,9 +1,9 @@
 package br.com.app.paulo.trabalho01;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -22,6 +22,8 @@ import java.util.List;
 import br.com.app.paulo.trabalho01.dao.AgendaDAO;
 import br.com.app.paulo.trabalho01.model.Agenda;
 import br.com.app.paulo.trabalho01.view.adapter.AgendaAdapter;
+
+import static br.com.app.paulo.trabalho01.LoginActivity.KEY_APP_PREFERENCES;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -124,22 +126,26 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        switch (id) {
+            case R.id.nav_sair:
+                sair();
+                break;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+    private void sair() {
+
+        SharedPreferences pref = getSharedPreferences(KEY_APP_PREFERENCES,
+                MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putString(LoginActivity.KEY_LOGIN, "");
+        editor.apply();
+
+        Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(intent);
+        finish();
     }
 }
