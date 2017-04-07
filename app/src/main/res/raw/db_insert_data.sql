@@ -1,0 +1,1 @@
+INSERT INTO agenda (nome, telefone, nota) VALUES ('Paulo', '(11)1234-1234', 5.0);
