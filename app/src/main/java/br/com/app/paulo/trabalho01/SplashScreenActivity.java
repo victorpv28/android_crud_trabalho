@@ -27,8 +27,7 @@ import br.com.app.paulo.trabalho01.model.Usuarios;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
-    // tempo de duração que a splashscreen ficará visível na tela
-    private final int SPLASH_DISPLAY_LENGTH = 3500;
+    private final int SPLASH_DISPLAY_LENGTH = 4000;
     private ImageView ivLogo;
 
     @Override
@@ -36,10 +35,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        // método para realizar a animação
         carregar();
-
-        // método para carregar os usuários
         new BuscaDados().execute("http://www.mocky.io/v2/58b9b1740f0000b614f09d2f");
 
     }

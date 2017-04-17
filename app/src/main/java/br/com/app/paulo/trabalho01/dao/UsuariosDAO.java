@@ -43,7 +43,7 @@ public class UsuariosDAO {
         }
     }
 
-    public boolean findUsuario(String login, String senha) {
+    public boolean procurarUsuarios(String login, String senha) {
         SQLiteDatabase db = dbo.getWritableDatabase();
         String query = "SELECT id, login, senha FROM " + UsuariosDAO.TABELA_USUARIO + " WHERE login = ? AND senha = ?";
         Cursor cursor = db.rawQuery(query, new String[]{String.valueOf(login), String.valueOf(senha)});

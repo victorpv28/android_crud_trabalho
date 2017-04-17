@@ -137,12 +137,10 @@ public class MainActivity extends AppCompatActivity
     }
     private void sair() {
 
-        SharedPreferences pref = getSharedPreferences(KEY_APP_PREFERENCES,
-                MODE_PRIVATE);
+        SharedPreferences pref = getSharedPreferences(KEY_APP_PREFERENCES, MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
         editor.putString(LoginActivity.KEY_LOGIN, "");
         editor.apply();
-
         Intent intent = new Intent(MainActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
