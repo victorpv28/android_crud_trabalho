@@ -62,9 +62,9 @@ public class AgendaDAO {
         resultado = db.update(AgendaDAO.TABELA_AGENDA, values, AgendaDAO.COLUNA_ID + "=" + id, null);
 
         if (resultado == -1) {
-            return "Erro ao inserir registro";
+            return "Error";
         } else {
-            return "Registro inserido com sucesso";
+            return "Record successfully entered";
         }
     }
 

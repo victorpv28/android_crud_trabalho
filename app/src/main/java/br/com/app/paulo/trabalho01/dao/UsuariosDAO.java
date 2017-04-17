@@ -37,9 +37,9 @@ public class UsuariosDAO {
                 values);
         db.close();
         if (resultado == -1) {
-            return "Erro ao inserir registro";
+            return "Error";
         } else {
-            return "Registro inserido com sucesso";
+            return "Record successfully entered";
         }
     }
 
