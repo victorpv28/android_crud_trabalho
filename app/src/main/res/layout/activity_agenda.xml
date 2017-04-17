@@ -19,7 +19,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Nome"
+            android:hint="@string/hint_nome"
             android:id="@+id/etNome" />
     </android.support.design.widget.TextInputLayout>
 
@@ -31,7 +31,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Telefone"
+            android:hint="@string/hint_telefone"
             android:id="@+id/etTelefone" />
 
         <RatingBar
@@ -50,6 +50,6 @@
         android:layout_height="wrap_content"
         android:onClick="cadastrar"
         android:layout_marginTop="20dp"
-        android:text="Cadastrar" />
+        android:text="@string/text_botao_cadastrar" />
 
 </LinearLayout>

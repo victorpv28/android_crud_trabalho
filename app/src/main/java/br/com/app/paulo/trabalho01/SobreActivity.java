@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class SobreActivity extends AppCompatActivity {
 
@@ -22,6 +23,8 @@ public class SobreActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 finish();
+                Toast.makeText(SobreActivity.this, "Thanks!!",
+                        Toast.LENGTH_LONG).show();
             }
         });
     }

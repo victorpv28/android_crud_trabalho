@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hint_nome">Name</string>
+    <string name="hint_senha">Input your password</string>
+    <string name="hint_telefone">Phone</string>
+    <string name="hint_usuario">Input your username</string>
+    <string name="menu_sair">Logout</string>
+    <string name="menu_sobre">About</string>
+    <string name="opcao_deletar">Delete</string>
+    <string name="opcao_editar">Edit</string>
+    <string name="textVersao">Version 1.0</string>
+    <string name="text_botao_cadastrar">Add</string>
+    <string name="text_manter_conectado">Keep Connected</string>
+</resources>

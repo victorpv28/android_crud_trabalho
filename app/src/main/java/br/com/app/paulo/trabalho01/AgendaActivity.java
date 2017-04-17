@@ -59,8 +59,6 @@ public class AgendaActivity extends AppCompatActivity {
         retornaParaTelaAnterior();
     }
 
-
-    //retorna para tela de lista de torcedores
     public void retornaParaTelaAnterior() {
         Intent intentMessage = new Intent();
         setResult(CODE_AGENDA, intentMessage);

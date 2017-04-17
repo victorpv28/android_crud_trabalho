@@ -100,12 +100,10 @@ public class SplashScreenActivity extends AppCompatActivity {
                     StringBuilder result = new StringBuilder();
                     String linha;
 
-                    // enquanto receber a leitura de linha
                     while ((linha = buffer.readLine()) != null) {
                         result.append(linha);
                     }
 
-                    // fechar a conexão
                     conn.disconnect();
 
                     return result.toString();
@@ -127,7 +125,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         protected void onPostExecute(String s) {
             UsuariosDAO usuariosDAO = new UsuariosDAO(SplashScreenActivity.this);
             if (s == null) {
-                Toast.makeText(SplashScreenActivity.this, "Erro ao carregar dados do usuário.", Toast.LENGTH_LONG).show();
+                Toast.makeText(SplashScreenActivity.this, "Error, users not found!", Toast.LENGTH_LONG).show();
             } else {
                 try {
                     JSONObject json = new JSONObject(s);

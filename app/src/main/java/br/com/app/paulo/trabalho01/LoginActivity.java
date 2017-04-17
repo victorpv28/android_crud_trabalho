@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
                     }
                     iniciarApp();
                 }else {
-                    Toast.makeText(getApplicationContext(), "Usuario ou senha invalida", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"You are using the wrong Username or Password", Toast.LENGTH_SHORT).show();
                 }
 
             }

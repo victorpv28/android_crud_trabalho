@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity
     {
         super.onActivityResult(requestCode, resultCode, data);
         if(resultCode == RESULT_CANCELED) {
-            Toast.makeText(MainActivity.this, "Cancelado",
+            Toast.makeText(MainActivity.this, "Canceled",
                     Toast.LENGTH_LONG).show();
         } else if(requestCode == AgendaActivity.CODE_AGENDA) {
             carregarContatos();
