@@ -5,4 +5,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="textVersao">versão 1.0</string>
+    <string name="nomeDev">Paulo Victor Nascimento Luz</string>
 </resources>

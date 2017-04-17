@@ -8,12 +8,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import br.com.app.paulo.trabalho01.dao.UsuariosDAO;
+
 public class LoginActivity extends AppCompatActivity {
 
-    private final String LOGIN_DEFAULT = "android";
-    private final String SENHA_DEFAULT = "123";
     public static final String KEY_APP_PREFERENCES = "APP_PREFERENCE";
     public static final String KEY_LOGIN = "login";
+
+    private UsuariosDAO dao;
+
     private EditText etLogin;
     private EditText etSenha;
     private Button btLogar;
@@ -26,6 +29,8 @@ public class LoginActivity extends AppCompatActivity {
         etLogin = (EditText) findViewById(R.id.etLogin);
         etSenha = (EditText) findViewById(R.id.etSenha);
         btLogar = (Button) findViewById(R.id.btLogar);
+
+        dao = new UsuariosDAO(this);
 
         btLogar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,8 +50,7 @@ public class LoginActivity extends AppCompatActivity {
     private boolean isLoginValido() {
         String login = etLogin.getText().toString();
         String senha = etSenha.getText().toString();
-        if(login.equals(LOGIN_DEFAULT)
-                && senha.equals(SENHA_DEFAULT)) {
+        if(dao.findUsuario(login,senha) == true){
             return true;
         } else
             return false;

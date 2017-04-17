@@ -98,12 +98,6 @@ public class MainActivity extends AppCompatActivity
         rvLista.setLayoutManager(layout);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -129,6 +123,11 @@ public class MainActivity extends AppCompatActivity
         switch (id) {
             case R.id.nav_sair:
                 sair();
+                break;
+
+            case R.id.nav_sobre:
+                Intent intent = new Intent(this.getApplicationContext(),SobreActivity.class);
+                startActivity(intent);
                 break;
         }
 
